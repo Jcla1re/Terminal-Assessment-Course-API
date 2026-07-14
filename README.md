@@ -39,15 +39,11 @@ Install **Express** as a core production dependency, and **Nodemon** as a develo
 
 ## Running the Server
 
-You can start the application using either standard Node.js execution or through automated live-reload monitoring.
+You can start the application using standard Node.js execution.
 
-### Option A: Standard Execution (Production Mode)
+### Standard Execution (Production Mode)
 Run the server using the standard Node runtime execution path:
 `node server.js`
-
-### Option B: Development Execution (Hot-Reload Mode)
-Run the server using Nodemon so that any changes made to `server.js` automatically refresh the live local instance without manual intervention:
-`npx nodemon server.js`
 
 Upon successful startup, the terminal will display:
 `Server is running on http://localhost:3000`
