@@ -58,15 +58,12 @@ Upon successful startup, the terminal will display:
 
 All endpoints manage a structural in-memory database array. Every successful creation or retrieval payload includes a required `submittedBy` identifier string containing student credentials for grading compliance.
 
-### Endpoint Overview Matrix
-
-| HTTP Method | Path | Description | Expected Payload (Body) | Success Status | Error Conditions handled |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **GET** | `/api/courses` | Retrieves all courses | *None* | `200 OK` | *None* |
-| **GET** | `/api/courses/:id` | Retrieves a specific course by ID | *None* | `200 OK` | `404 Not Found` (Missing ID) |
-| **POST** | `/api/courses` | Adds a new course to memory | JSON object | `201 Created` | `400 Bad Request` (Missing fields) |
-| **PUT** | `/api/courses/:id` | Replaces an existing course by ID | JSON object | `200 OK` | `400 Bad Request` / `404 Not Found` |
-| **DELETE** | `/api/courses/:id` | Removes a course from memory | *None* | `200 OK` | `404 Not Found` (Missing ID) |
+## API Endpoints
+* **GET /api/courses** - Returns the full list of courses as JSON.
+* **GET /api/courses/:id** - Returns a specific course by its ID.
+* **POST /api/courses** - Creates a new course (requires courseCode and courseName in body).
+* **PUT /api/courses/:id** - Updates an existing course by its ID.
+* **DELETE /api/courses/:id** - Deletes a course by its ID.
 
 ---
 
